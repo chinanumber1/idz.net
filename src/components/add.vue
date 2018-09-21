@@ -28,7 +28,7 @@
 
         </ul>
         <div class="submit">
-            <router-link to="/add"> <button class="submit_button">新增加地址</button></router-link>
+            <button class="submit_button">新增加地址</button>
         </div>
     </div>
 </template>
@@ -39,14 +39,13 @@
         name: 'address',
         data() {
             return {
-                message: '地址管理',
-
+                message: '增加地址管理',
                 users: [
 
 
-                    {name: '昵称', value: '赖连庄'},
+                    {name: '姓名', value: '赖连庄'},
                     {name: '电话', value: '18815154008'},
-                    {name: '地址', value: '浙江省温州市鳌江镇古鳌南路36号'}
+                    {name: '地址', valuedi: '浙江省温州市鳌江镇古鳌南路36号'}
                 ],
 
                 src: "static/images/arrow.png",

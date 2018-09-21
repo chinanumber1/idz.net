@@ -1,5 +1,5 @@
 <template>
-    <div id="order" class="layouts_order">
+    <div id="member" class="layouts_order">
 
         <div class="infor_header_order">
 
@@ -14,21 +14,19 @@
         </div>
 
         <div class="center">
-            订单号：3752454
+
         </div>
 
 
-        <div class="order_lists order_list_c">
+        <div class="member_list">
 
 
             <ul>
-                <li v-for="order in orders" class="order">
-                    <h2>标题:{{order.title}}</h2>
-                    <div>订单编号:{{order.code}}</div>
-                    <div>时间:{{order.time}}</div>
-                    <div> 数量:{{order.math}}</div>
-                    <span class="order_price"> 金额:{{order.price}}</span>
-                    <span class="number"> 交易状态:{{order.state}}</span>
+                <li v-for="member in members" class="member">
+
+                    有效期:{{member.name}}
+
+                    <h1>会籍价格:{{member.price}}</h1>
 
 
                 </li>
@@ -38,9 +36,11 @@
         </div>
 
 
-        <div class="buy">
-            <div class="buy_left">取消订单</div>
-            <div class="buy_right">再次购买</div>
+
+        <div class="submit_order">
+
+            <button class="submit_button">立即开通会员</button>
+
         </div>
 
 
@@ -52,17 +52,22 @@
 <script>
 
     export default {
-        name: 'order',
+        name: 'member',
 
         data() {
             return {
-                message: '订单列表',
-                title: '花格子衬衫',
+                message: '开通会员',
+
                 itemList: [],
+
 
                 orders: [],
 
                 src: "static/images/arrow.png",
+
+                members:[
+                    {name:'12个月', price:'588.00元',}
+                ]
 
 
             }

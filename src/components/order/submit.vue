@@ -1,5 +1,5 @@
 <template>
-    <div id="order" class="layouts_order">
+    <div id="submit" class="layouts_order">
 
         <div class="infor_header_order">
 
@@ -20,15 +20,32 @@
 
         <div class="order_lists order_list_c">
 
+<ul class="order_index">
+    <li>姓名：{{name}}</li>
+    <li>手机：{{phone}}</li>
+</ul>
+            <div class="submit_address">
+              <div class="submit_address_left"> 地址 ：{{address}}</div>
+                <div class="submit_address_right"><button class="submit_button">增加</button> </div>
+
+            </div>
+
+            <div class="submit_size">
+
+                <div class="submit_size_left">  身体码数：{{size}}</div>
+                <div class="submit_size_right"> <button class="submit_button">增加</button> </div>
+            </div>
+
 
             <ul>
                 <li v-for="order in orders" class="order">
                     <h2>标题:{{order.title}}</h2>
                     <div>订单编号:{{order.code}}</div>
-                    <div>时间:{{order.time}}</div>
-                    <div> 数量:{{order.math}}</div>
+                    <div>款号:{{order.time}}</div>
+
+                    <div> DIY:{{order.diy}}</div>
                     <span class="order_price"> 金额:{{order.price}}</span>
-                    <span class="number"> 交易状态:{{order.state}}</span>
+
 
 
                 </li>
@@ -38,9 +55,10 @@
         </div>
 
 
-        <div class="buy">
-            <div class="buy_left">取消订单</div>
-            <div class="buy_right">再次购买</div>
+        <div class="submit_order">
+
+            <button class="submit_button">提交订单</button>
+
         </div>
 
 
@@ -52,16 +70,18 @@
 <script>
 
     export default {
-        name: 'order',
+        name: 'submit',
 
         data() {
             return {
                 message: '订单列表',
                 title: '花格子衬衫',
                 itemList: [],
-
+                 address:'温州平阳',
+                size:'174cm/70kg/32英寸/',
                 orders: [],
-
+                name:'赖连庄',
+                phone:'18815154008',
                 src: "static/images/arrow.png",
 
 

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import resource from './resource';//通过import引入
 
 Vue.config.productionTip = false;
 Vue.prototype.bus = new Vue();
@@ -10,6 +11,7 @@ Vue.prototype.bus = new Vue();
 new Vue({
   el: '#app',
   router,
+    resource,
   components: { App },
   template: '<App/>'
 })
